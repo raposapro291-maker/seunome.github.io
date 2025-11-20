@@ -1,1 +1,236 @@
-seila
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppHub - Sua Loja de Aplicativos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            outline: none;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .app-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .app-description {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .app-rating {
+            color: #ffc107;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .download-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .apps-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 AppHub</h1>
+            <p>Encontre e baixe os melhores aplicativos</p>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Buscar aplicativos...">
+        </div>
+
+        <div class="apps-grid">
+            <!-- APP 1 -->
+            <div class="app-card">
+                <div class="app-icon">📸</div>
+                <div class="app-name">PhotoPro</div>
+                <div class="app-description">Editor de fotos profissional com filtros avançados e ferramentas de edição.</div>
+                <div class="app-rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                <button class="download-btn">Baixar Agora</button>
+            </div>
+
+            <!-- APP 2 -->
+            <div class="app-card">
+                <div class="app-icon">🎵</div>
+                <div class="app-name">MusicBox</div>
+                <div class="app-description">Ouça suas músicas favoritas com qualidade HD e playlists personalizadas.</div>
+                <div class="app-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <button class="download-btn">Baixar Agora</button>
+            </div>
+
+            <!-- APP 3 -->
+            <div class="app-card">
+                <div class="app-icon">💪</div>
+                <div class="app-name">FitTrack</div>
+                <div class="app-description">Acompanhe seus treinos e metas de fitness com análises detalhadas.</div>
+                <div class="app-rating">⭐⭐⭐⭐ (4.7)</div>
+                <button class="download-btn">Baixar Agora</button>
+            </div>
+
+            <!-- APP 4 -->
+            <div class="app-card">
+                <div class="app-icon">📚</div>
+                <div class="app-name">ReadMore</div>
+                <div class="app-description">Biblioteca digital com milhares de livros e revistas para ler.</div>
+                <div class="app-rating">⭐⭐⭐⭐ (4.6)</div>
+                <button class="download-btn">Baixar Agora</button>
+            </div>
+
+            <!-- APP 5 -->
+            <div class="app-card">
+                <div class="app-icon">🎮</div>
+                <div class="app-name">GameVerse</div>
+                <div class="app-description">Plataforma com centenas de jogos em um só lugar.</div>
+                <div class="app-rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                <button class="download-btn">Baixar Agora</button>
+            </div>
+
+            <!-- APP 6 -->
+            <div class="app-card">
+                <div class="app-icon">🍔</div>
+                <div class="app-name">FoodDelivery</div>
+                <div class="app-description">Peça comida dos melhores restaurantes da sua cidade.</div>
+                <div class="app-rating">⭐⭐⭐⭐ (4.7)</div>
+                <button class="download-btn">Baixar Agora</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
